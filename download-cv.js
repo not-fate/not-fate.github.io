@@ -1,5 +1,5 @@
-document.getElementById('download-cv').addEventListener('click', function () {
+document.getElementById('download-cv').addEventListener('click', () => {
     const a = document.getElementById('download-cv')
-    a.href = 'test.pdf'
+    a.href = 'CV.pdf'
     a.download = 'SOROKINA_QA_RESUME.pdf'
-});
+})

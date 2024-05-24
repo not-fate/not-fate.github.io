@@ -16,7 +16,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-h1, h2, h3 {
+h1, h2 {
   margin: 0;
 }
 
@@ -104,7 +104,7 @@ h1, h2, h3 {
   align-items: center;
   justify-self: center;
   border: 10px solid $border-color;
-  background-image: url("code.png");
+  background-image: url("img/code.png");
   animation: ava-animate 5s infinite alternate;
   box-shadow: 2px 5px 15px $box-shadow-color;
   border-radius: 50%;
