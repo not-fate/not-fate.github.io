@@ -1,3 +1,9 @@
+$primary-color: #C30925;
+$secondary-color: #415150;
+$background-color: #DCD9D4;
+$border-color: #fff;
+$box-shadow-color: rgb(221, 220, 220);
+
 *,
 ::before,
 ::after {
@@ -6,7 +12,7 @@
 
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1, h2 {
@@ -18,9 +24,8 @@ h1, h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media screen and (max-width: 978px) {
-  .landing {
+
+  @media screen and (max-width: 978px) {
     padding-top: 30px;
   }
 }
@@ -36,9 +41,8 @@ h1, h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   grid-gap: 20px;
-}
-@media screen and (max-width: 978px) {
-  .main {
+
+  @media screen and (max-width: 978px) {
     grid-row-gap: 20px;
   }
 }
@@ -47,9 +51,8 @@ h1, h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-@media screen and (max-width: 978px) {
-  .about {
+
+  @media screen and (max-width: 978px) {
     text-align: center;
   }
 }
@@ -58,9 +61,8 @@ h1, h2 {
   font-size: 48px;
   line-height: 1.1;
   margin-bottom: 20px;
-}
-@media screen and (max-width: 978px) {
-  .title {
+
+  @media screen and (max-width: 978px) {
     font-size: 28px;
     margin-bottom: 10px;
   }
@@ -69,9 +71,8 @@ h1, h2 {
 .subtitle {
   font-size: 32px;
   font-weight: 401;
-}
-@media screen and (max-width: 978px) {
-  .subtitle {
+
+  @media screen and (max-width: 978px) {
     font-size: 22px;
     font-weight: 400;
   }
@@ -79,19 +80,21 @@ h1, h2 {
 
 .links {
   display: flex;
-}
-@media screen and (max-width: 978px) {
-  .links {
+
+
+  @media screen and (max-width: 978px) {
     justify-content: center;
   }
-}
-.links .link {
-  margin-right: 10px;
-  font-size: 30px;
-  color: #415150;
-}
-.links .link:hover {
-  color: #C30925;
+
+  .link {
+    margin-right: 10px;
+    font-size: 30px;
+    color: $secondary-color;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
 }
 
 .bug-box {
@@ -99,23 +102,23 @@ h1, h2 {
   justify-content: center;
   align-items: center;
   justify-self: center;
-  border: 10px solid #fff;
-  background-image: url("img/code.png");
+  border: 10px solid $border-color;
+  background-image: url("code.png");
   animation: ava-animate 5s infinite alternate;
-  box-shadow: 2px 5px 15px rgb(221, 220, 220);
+  box-shadow: 2px 5px 15px $box-shadow-color;
   border-radius: 50%;
-}
-@media screen and (max-width: 978px) {
-  .bug-box {
+
+  @media screen and (max-width: 978px) {
     max-width: 350px;
     justify-self: center;
   }
-}
-.bug-box .bug-img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  animation: ava-bg 3s infinite alternate;
+
+  .bug-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    animation: ava-bg 3s infinite alternate;
+  }
 }
 
 @media screen and (max-width: 978px) {
@@ -123,27 +126,31 @@ h1, h2 {
     font-size: 14px;
   }
 }
+
 @keyframes ava-animate {
   0% {
-    border-radius: 62% 38% 72% 28%/67% 32% 68% 33%;
+    border-radius: 62% 38% 72% 28% / 67% 32% 68% 33%;
   }
+
   40% {
-    border-radius: 37% 63% 53% 47%/67% 32% 68% 33%;
+    border-radius: 37% 63% 53% 47% / 67% 32% 68% 33%;
   }
+
   60% {
-    border-radius: 23% 77% 39% 61%/78% 54% 46% 22%;
+    border-radius: 23% 77% 39% 61% / 78% 54% 46% 22%;
   }
+
   100% {
-    border-radius: 18% 82% 24% 76%/43% 54% 46% 57%;
+    border-radius: 18% 82% 24% 76% / 43% 54% 46% 57%;
   }
 }
+
 @keyframes ava-bg {
   from {
     backdrop-filter: hue-rotate(0);
   }
+
   to {
     backdrop-filter: hue-rotate(90deg);
   }
 }
-
-/*# sourceMappingURL=style.css.map */
